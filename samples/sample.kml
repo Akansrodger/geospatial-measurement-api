@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample survey</name>
+    <Placemark>
+      <name>Plot A (polygon with a hole)</name>
+      <description>Approx. 1.1 km x 1.1 km square near the equator</description>
+      <ExtendedData>
+        <Data name="owner"><value>Survey Dept</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs><LinearRing><coordinates>
+          3.000,0.000,0 3.010,0.000,0 3.010,0.010,0 3.000,0.010,0 3.000,0.000,0
+        </coordinates></LinearRing></outerBoundaryIs>
+        <innerBoundaryIs><LinearRing><coordinates>
+          3.004,0.004,0 3.006,0.004,0 3.006,0.006,0 3.004,0.006,0 3.004,0.004,0
+        </coordinates></LinearRing></innerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Road 1 (line)</name>
+      <LineString><coordinates>0,0,0 1,0,0</coordinates></LineString>
+    </Placemark>
+    <Placemark>
+      <name>Landmark (point)</name>
+      <Point><coordinates>77.2090,28.6139,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Northern plot (1 deg x 1 deg at 60N)</name>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>
+        10,60 11,60 11,61 10,61 10,60
+      </coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Mixed collection (unsupported for measurement)</name>
+      <MultiGeometry>
+        <Point><coordinates>1,1</coordinates></Point>
+        <LineString><coordinates>1,1 2,2</coordinates></LineString>
+      </MultiGeometry>
+    </Placemark>
+  </Document>
+</kml>
